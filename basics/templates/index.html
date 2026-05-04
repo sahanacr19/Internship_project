@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* LOGO SECTION */
+
+.logo-section{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+}
+
+.company-logo{
+width:500px;
+}
+
+.college-logo{
+width:420px;
+}
+
+/* TITLE */
+
+.title{
+text-align:center;
+font-size:34px;
+font-weight:bold;
+margin-top:20px;
+color:white;
+}
+
+/* MAIN CONTENT */
+
+.domain-section{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:120px;
+margin-top:80px;
+}
+
+.left-img{
+width:220px;
+}
+
+.right-img{
+width:220px;
+}
+
+.projects{
+font-size:28px;
+font-weight:bold;
+text-align:center;
+color:white;
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+color:white;
+font-weight:bold;
+margin-top:100px;
+}
+
+</style>
+
+</head>
+{% load static %}
+
+<body style="background-image:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSEhIVFhUVFRUXFRUVFRUVFRUVFRUXFhcVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFw8QFS0dFR0rLS0rLS0tLSstLSstLS0tKy0tLS0tLS0tLS0tLS0tLSstLS0rLS0rKy0tKy0tKy0rLf/AABEIARMAtwMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAAAAQIDBAf/xAAqEAEBAAECBAUEAgMAAAAAAAAAARECITFBUXEDEmGR8IGhscHh8RMy0f/EABcBAQEBAQAAAAAAAAAAAAAAAAABAwL/xAAYEQEBAQEBAAAAAAAAAAAAAAAAARExIf/aAAwDAQACEQMRAD8A+JSs4ySJaqLq1dDTD0WTln6gzaytEUgigGmFam31/ALb093NeSAshYRvXymZ+gZuOXylOHdKCNadVm8ZWQC1rw9GccN/X8tf4trczE68c9JOf8MydOioVDVqykFenwfCm/C3bbO079Qmnyc8XnenpPUdRldvHnykW3cw4arE1Vq1gQXTMmC0UiUWQCbBYATVtj+/dAAjV6MkBUKAYb16cdU0Tm1txmVRZouOmHOrrt4VMBE0zL0aNPl7saduGf36Lr8SznjteHsRL6vi6pNsb87fxjkjOrw7x4Trfm6hMc9M+zefnozp+xqRWaGVgqC6qkBq6UtKt0gmUUkA0xKt1IA1o0Z5xHTR4W8nXhvMZ7iVjXp9YaJ+/fGzV37T3XtNlNWzlOH3vc1aLz23vvxx86k03jw58WvN058d+Pe0Rx1fP4dbeHBi2Z4/X/kTVq6f2K6adW/T7YP8knDj1cb3S01MdNXiW75zRny7Zv0n7BciCFRSLbn+kUCRfLWcloGDKANYaujaWfX03SxZqvuqMyNa0xYeUVnzXhyd9unHHzH0c5o6rMc846cBK6avD53vt+PRi6rJjOPnVnVrvDO3TkzkSRrzTuzdVWU8l442RUguJ1J4mOApp0LmT1/HsxldOnrt86CFzfWjV8TH+u3T+QGIBBVMEICVAAa0xIuQXc+qRdvm6omWpi88fhmWzdJLRW/PJwn1/WGfNUXzII35Ljf7s56JQa27s3UtSALp059O6yycF1apZNp9OfcGfugAgoAZEBQARqRAFwhFtAyeZEBckCQCxbLLiouAKGFx1oJa1o0XtPVnVd+/U+oNWTlcrcTk556IItosQUyNS4+fsUYUyIEqAAsAAMoC2qiALKGAWrjDIBNXQoASBEBTAABUBUWTP9gIAACggqAoAIpAAFBAysAwlqpAMAuAQMgIKARFwAgACo1dO2QTJRdPr87Agt04vXsaqCFvIwAEIuQRc+pL78kBfMaqJQEUoGV03G6QBZUqxAKLkBlUAURQRauEwCliUAgQBcIVaAgABADAAC5S0BcoAAgCiAKIAqpKZAouPcgGTPsgC+mEAC0WoAirdO2czjjHPuCGQwBSItAEWgBp05AQAFAyA1dM68/lZLQAhKBIuS54oBCgBIYDIGSmUBSGS0AMgIC4BAAAWAgtACFiAtpgtACgAC3Tw3nbfbuCGBAUkQAUARUAVBQEABUAAAFlEBS1FAIAGQhaCKi5AyBQQWAIKgAoC3gggKIACoAKgAoAvlQwAEaxOYM4IgAKUDAGAQFyCClAtEAFqAAAClqALVlQEUySgKi6QZGjAIQABZEAQUEABUAAWxAVFygAACgCAoLcIKBUAAMIC5QAFRQRbEWggAAAAAAACwAQABaAKyAKgAAAqAAAAAD/2Q==')">
+
+{% csrf_token %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+
+    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+
+      <!-- LEFT SIDE -->
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'index' %}">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'personality_predict' %}">Personality Prediction</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'job_role' %}">Job Role Prediction</a>
+        </li>
+
+        
+
+      </ul>
+
+      <!-- RIGHT SIDE -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a href="{% url 'logout' %}" class="btn btn-primary">LogOut</a>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+</nav>
+
+
+
+{% block content %}
+
+<!-- LOGOS -->
+
+<div class="logo-section">
+
+<img src="{% static 'company_logo.jpg' %}" class="company-logo">
+
+<img src="{% static '1.png' %}" class="college-logo">
+
+</div>
+
+
+<!-- TITLE -->
+
+<div class="title">
+PYTHON AND APPLIED MACHINE LEARNING
+</div>
+
+
+<!-- MAIN SECTION -->
+
+<div class="domain-section">
+
+<img src="{% static 'dp.png' %}" class="left-img">
+
+<div class="projects">
+<p>1. Personality Prediction</p>
+<p>2. Job Role Prediction</p>
+</div>
+
+<img src="{% static 'ml.jpg' %}" class="right-img">
+
+</div>
+
+
+<div class="footer">
+INTERNSHIP @ KARUNADU TECHNOLOGIES PVT LTM  <br>
+Sahana C R | Final Year | Dept of ISE
+</div>
+
+{% endblock %}
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

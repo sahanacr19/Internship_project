@@ -1,0 +1,183 @@
+
+{% extends 'index.html' %}
+{% block content %}
+<head>
+<meta charset="UTF-8">
+<title>Job Role Prediction</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background:#eef2f7;
+}
+
+.container{
+width:1100px;
+margin:40px auto;
+padding:20px;
+}
+
+h1{
+text-align:center;
+margin-bottom:30px;
+color:#2c6ed5;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.field{
+display:flex;
+flex-direction:column;
+}
+
+.field label{
+font-weight:bold;
+margin-bottom:6px;
+color:white;
+}
+
+.field input,
+.field select{
+height:38px;
+padding:6px 10px;
+border:1px solid #ccc;
+border-radius:4px;
+}
+
+button{
+display:block;
+margin:30px auto 10px auto;
+width:200px;
+height:40px;
+background:#1e8e3e;
+color:white;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#166b2f;
+}
+
+.result{
+text-align:center;
+font-size:20px;
+margin-top:15px;
+color:green;
+}
+
+input, select{
+width:100%;
+height:40px;
+padding:6px 10px;
+border:1px solid #ccc;
+border-radius:4px;
+box-sizing:border-box;
+background:rgba(255,255,255,0.9);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 style="font-weight:700;">Job Role Prediction</h1>
+
+<form method="POST">
+{% csrf_token %}
+
+<div class="grid">
+
+<div class="field">
+<label>Age</label>
+<input type="number" name="age" required>
+</div>
+
+<div class="field">
+<label>Gender</label>
+<select name="gender">
+<option value="0">Male</option>
+<option value="1">Female</option>
+</select>
+</div>
+
+<div class="field">
+<label>Degree</label>
+<select name="degree">
+<option value="0">BE</option>
+<option value="1">BSc</option>
+<option value="2">BSc Hons</option>
+<option value="3">MSc</option>
+<option value="4">PhD</option>
+</select>
+</div>
+
+<div class="field">
+<label>Field of Study</label>
+<select name="field">
+<option value="0">IT</option>
+<option value="1">Engineering</option>
+<option value="2">Business</option>
+<option value="3">Education</option>
+</select>
+</div>
+
+<div class="field">
+<label>Work Experience</label>
+<input type="number" name="experience" required>
+</div>
+
+<div class="field">
+<label>Certifications</label>
+<select name="certifications">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+</div>
+
+<div class="field">
+<label>Skills Count</label>
+<input type="number" name="skills" required>
+</div>
+
+<div class="field">
+<label>Preferred Location</label>
+<select name="location">
+<option value="0">Delhi</option>
+<option value="1">Chennai</option>
+<option value="2">Bangalore</option>
+<option value="3">Mysore</option>
+<option value="4">Hyderabad</option>
+</select>
+</div>
+
+<div class="field">
+<label>Projects Count</label>
+<input type="number" name="projects" required>
+</div>
+
+</div>
+
+<button type="submit">Predict</button>
+
+</form>
+
+<div class="result" style="color:red;">
+{% if prediction %}
+Predicted Job Role : {{ prediction }}
+{% endif %}
+</div>
+
+</div>
+
+</body>
+{% endblock %}

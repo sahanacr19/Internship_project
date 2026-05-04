@@ -1,0 +1,197 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+.form-title{
+text-align:center;
+font-size:32px;
+font-weight:bold;
+color:#1a73e8;
+margin-bottom:30px;
+}
+
+.form-control{
+width:75%;
+height:30px;
+font-size:13px;
+}
+
+label{
+font-size:14px;
+font-weight:600;
+color:white;
+
+}
+
+.row{
+row-gap:5px;
+}
+
+
+
+</style>
+
+<div class="container mt-4">
+
+<h2 class="form-title">Introvert vs Extrovert Prediction</h2>
+
+<form method="POST">
+{% csrf_token %}
+
+<div class="row g-3">
+
+<div class="col-md-3">
+<label>Social Energy</label>
+<input type="number" step="any" class="form-control" name="social_energy" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Alone Time Preference</label>
+<input type="number" step="any" class="form-control" name="alone_time_preference" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Talkativeness</label>
+<input type="number" step="any" class="form-control" name="talkativeness" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Deep Reflection</label>
+<input type="number" step="any" class="form-control" name="deep_reflection" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Group Comfort</label>
+<input type="number" step="any" class="form-control" name="group_comfort" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Party Liking</label>
+<input type="number" step="any" class="form-control" name="party_liking" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Listening Skill</label>
+<input type="number" step="any" class="form-control" name="listening_skill" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Creativity</label>
+<input type="number" step="any" class="form-control" name="creativity" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Organization</label>
+<input type="number" step="any" class="form-control" name="organization" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Leadership</label>
+<input type="number" step="any" class="form-control" name="leadership" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Risk Taking</label>
+<input type="number" step="any" class="form-control" name="risk_taking" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Public Speaking</label>
+<input type="number" step="any" class="form-control" name="public_speaking_comfort" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Curiosity</label>
+<input type="number" step="any" class="form-control" name="curiosity" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Routine Preference</label>
+<input type="number" step="any" class="form-control" name="routine_preference" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Excitement Seeking</label>
+<input type="number" step="any" class="form-control" name="excitement_seeking" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Friendliness</label>
+<input type="number" step="any" class="form-control" name="friendliness" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Emotional Stability</label>
+<input type="number" step="any" class="form-control" name="emotional_stability" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Planning</label>
+<input type="number" step="any" class="form-control" name="planning" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Spontaneity</label>
+<input type="number" step="any" class="form-control" name="spontaneity" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Adventurousness</label>
+<input type="number" step="any" class="form-control" name="adventurousness" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Reading Habit</label>
+<input type="number" step="any" class="form-control" name="reading_habit" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Sports Interest</label>
+<input type="number" step="any" class="form-control" name="sports_interest" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Online Social Usage</label>
+<input type="number" step="any" class="form-control" name="online_social_usage" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Travel Desire</label>
+<input type="number" step="any" class="form-control" name="travel_desire" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Gadget Usage</label>
+<input type="number" step="any" class="form-control" name="gadget_usage" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Work Style Collaborative</label>
+<input type="number" step="any" class="form-control" name="work_style_collaborative" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Decision Speed</label>
+<input type="number" step="any" class="form-control" name="decision_speed" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)">
+</div>
+
+<div class="col-md-3">
+<label>Stress Handling</label>
+<input type="number" step="any" class="form-control" name="stress_handling" min="0" max="9" step="1" oninput="this.value=this.value.slice(0,1)" required>
+</div>
+
+</div>
+
+<div class="text-center mt-4">
+<button class="btn btn-success">Predict</button>
+</div>
+
+</form>
+
+<h4 class="text-center text-danger mt-3">{{result}}</h4>
+
+</div>
+
+{% endblock %}
