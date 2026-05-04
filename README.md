@@ -16,4 +16,14 @@ It highlights the internship titled "Python and Applied Machine Learning" under 
 
 A navigation bar is available at the top for quick access to different sections, along with a logout option for secure session management. The design is clean, structured, and user-friendly, ensuring a smooth user experience.
 
+## 3. Personality prediction page
+<img width="1887" height="888" alt="image" src="https://github.com/user-attachments/assets/4f041782-b7e1-4acb-84e2-f4d777556909" />
+The Personality Prediction page collects user inputs related to behavioral traits and uses a Machine Learning model to classify the user as an introvert or extrovert. Each input field accepts values in the range of 0–9, ensuring valid and consistent data for accurate predictions. The page features a structured form and provides instant results.
+
+## 4. Job Role prediction page
+<img width="1919" height="879" alt="image" src="https://github.com/user-attachments/assets/6742e997-436f-4658-8c77-7d1990688ed8" />
+The Job Role Prediction page collects user details such as education, experience, and preferences to predict suitable job roles using a Machine Learning model. It includes input validation and a structured form for accurate and easy data entry.
+
+
+
 
