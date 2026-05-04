@@ -24,6 +24,23 @@ The Personality Prediction page collects user inputs related to behavioral trait
 <img width="1919" height="879" alt="image" src="https://github.com/user-attachments/assets/6742e997-436f-4658-8c77-7d1990688ed8" />
 The Job Role Prediction page collects user details such as education, experience, and preferences to predict suitable job roles using a Machine Learning model. It includes input validation and a structured form for accurate and easy data entry.
 
+## ▶️ How to Run the Project
+
+1. Clone the repository:
+   git clone https://github.com/sahanacr19/Internship_project.git
+   
+2. Navigate to the project folder:
+   cd Internship_project
+ 
+3. Install dependencies:
+   pip install -r requirements.txt
+
+4. Run the server:
+   python manage.py runserver
+
+5. Open in browser:
+   http://127.0.0.1:8000/
+
 
 
 
