@@ -38,8 +38,6 @@ The Job Role Prediction page collects user details such as education, experience
 4. Run the server:
    python manage.py runserver
 
-5. Open in browser:
-   http://127.0.0.1:8000/
 
 
 
